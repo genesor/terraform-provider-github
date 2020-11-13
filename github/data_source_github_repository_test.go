@@ -14,7 +14,7 @@ func TestAccGithubRepositoryDataSource(t *testing.T) {
 
 		config := fmt.Sprintf(`
 			data "github_repositories" "test" {
-				query = "org:%s"
+				query = "org:%s created:>2020-01-01"
 			}
 
 			data "github_repository" "test" {
